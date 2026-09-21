@@ -1,0 +1,329 @@
+/* =========================================================
+   PlanDisney
+   Base Application Styles
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Design Tokens
+   --------------------------------------------------------- */
+
+:root {
+    --color-palm: #23483c;
+    --color-palm-dark: #18342c;
+
+    --color-cream: #f8f3e8;
+    --color-sand: #e6d5b3;
+
+    --color-coral: #cf7058;
+    --color-coral-light: #e9a18d;
+
+    --color-wood: #6c4a38;
+
+    --color-text: #2d302e;
+    --color-text-soft: #6f746f;
+
+    --color-white: #ffffff;
+
+    --page-width: 1180px;
+
+    --radius-small: 8px;
+    --radius-medium: 16px;
+    --radius-large: 24px;
+}
+
+
+/* ---------------------------------------------------------
+   Reset / Base
+   --------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8f3e8 0%,
+            #fffdf8 100%
+        );
+
+    color: var(--color-text);
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    min-height: 100vh;
+}
+
+
+/* ---------------------------------------------------------
+   Trip Header
+   --------------------------------------------------------- */
+
+.trip-header {
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-palm-dark),
+            var(--color-palm)
+        );
+
+    color: var(--color-white);
+
+    padding: 28px 40px 0;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.header-content {
+    max-width: var(--page-width);
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.trip-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+.trip-icon {
+    font-size: 42px;
+}
+
+
+.trip-brand h1 {
+    margin: 0;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+    text-transform: uppercase;
+}
+
+
+.trip-brand p {
+    margin: 4px 0 0;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 14px;
+
+    letter-spacing: 0.08em;
+}
+
+
+.current-user {
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 30px;
+
+    padding: 10px 18px;
+
+    font-size: 14px;
+}
+
+
+/* ---------------------------------------------------------
+   Navigation
+   --------------------------------------------------------- */
+
+.main-nav {
+    max-width: var(--page-width);
+
+    margin: 26px auto 0;
+
+    display: flex;
+
+    gap: 34px;
+}
+
+
+.main-nav a {
+    color: rgba(255, 255, 255, 0.7);
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.1em;
+
+    padding: 14px 0 16px;
+
+    border-bottom: 3px solid transparent;
+}
+
+
+.main-nav a:hover {
+    color: var(--color-white);
+}
+
+
+.main-nav a.active {
+    color: var(--color-white);
+
+    border-bottom-color: var(--color-coral-light);
+}
+
+
+/* ---------------------------------------------------------
+   Main Page
+   --------------------------------------------------------- */
+
+.page-container {
+    max-width: var(--page-width);
+
+    margin: 0 auto;
+
+    padding: 58px 40px 80px;
+}
+
+
+/* ---------------------------------------------------------
+   Welcome
+   --------------------------------------------------------- */
+
+.welcome {
+    max-width: 850px;
+}
+
+
+.eyebrow {
+    margin: 0 0 10px;
+
+    color: var(--color-coral);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+}
+
+
+.welcome h2 {
+    margin: 0;
+
+    color: var(--color-palm-dark);
+
+    font-size: 42px;
+    font-weight: 650;
+
+    letter-spacing: -0.025em;
+}
+
+
+.welcome-message {
+    margin: 10px 0 0;
+
+    color: var(--color-text-soft);
+
+    font-size: 21px;
+}
+
+
+.trip-details {
+    margin-top: 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    color: var(--color-wood);
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* ---------------------------------------------------------
+   Progress
+   --------------------------------------------------------- */
+
+.progress-section {
+    margin-top: 42px;
+
+    max-width: 650px;
+}
+
+
+.progress-heading {
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 14px;
+}
+
+
+.progress-heading span {
+    color: var(--color-text-soft);
+}
+
+
+.progress-heading strong {
+    color: var(--color-palm);
+}
+
+
+.progress-bar {
+    height: 10px;
+
+    overflow: hidden;
+
+    background: var(--color-sand);
+
+    border-radius: 20px;
+}
+
+
+.progress-value {
+    width: 38%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--color-coral),
+            var(--color-coral-light)
+        );
+
+    border-radius: 20px;
+}
+
+
+.progress-message {
+    margin-top: 10px;
+
+    color: var(--color-text-soft);
+
+    font-size: 13px;
+}
